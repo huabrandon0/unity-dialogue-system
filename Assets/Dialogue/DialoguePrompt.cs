@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
-public class DialoguePrompt : IDialogueSection
+public class DialoguePrompt : DialogueParagraph
 {
-    public string _paragraph;
-    public List<string> _choices;
+    public string[] _choices;
 }

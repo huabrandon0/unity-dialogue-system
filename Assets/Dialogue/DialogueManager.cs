@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public DialogueChapter _chapterToDisplay;
-    public DialogueDisplay _dialogueDisplay;
+    [SerializeField]
+    DialogueChapter _chapterToDisplay;
+
+    [SerializeField]
+    DialogueDisplay _dialogueDisplay;
 
     void Start()
     {

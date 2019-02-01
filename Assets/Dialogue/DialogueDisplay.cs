@@ -77,15 +77,15 @@ public class DialogueDisplay : MonoBehaviour
         IDialogueSection dialogueSection = _dialogueChapter._sections[index];
         switch (dialogueSection)
         {
-            case DialogueParagraph dp:
-                AnimateText(dp._paragraph);
-                break;
             case DialoguePrompt dp:
                 string toDisplay = dp._paragraph;
                 toDisplay += "; Choices:";
                 foreach(string choice in dp._choices)
                     toDisplay += " " + choice;
                 AnimateText(toDisplay);
+                break;
+            case DialogueParagraph dp:
+                AnimateText(dp._paragraph);
                 break;
         }
         return true;
